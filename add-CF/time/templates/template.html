@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タスク説明 - {{ id }}</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 外部CSSファイルをリンク -->
+</head>
+<body>
+    <h2>タスク説明</h2>
+    <img src="morning.jpg" width="40%" height="40%" alt="筑波山の写真"><br>
+    <h3>この写真が<span>{{ proposition }}</span>である事実がどの程度正しいと思うかを選択していただきます。</h3>
+    <p>文章とリンク先の記事に一通り目を通した上で，最終的にどれ程度正しいと思うか判断してください。</p>
+    <ul>
+        {% for evidence in evidence_list %}
+            <li>{{ evidence }}</li>
+        {% endfor %}
+    </ul>
+    <footer>
+        <p>&copy; 2024 タスク説明</p>
+    </footer>
+</body>
